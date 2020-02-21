@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Link } from "gatsby"
-
 import "../components/scss/nav.scss"
 import { Navbar, Nav } from 'react-bootstrap'
 
@@ -12,6 +10,7 @@ const Navigation = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/works">works</Nav.Link>
+          <Nav.Link href="/music">music</Nav.Link>
           <Nav.Link href="/about">about</Nav.Link>
           <Nav.Link href="/contact">contact</Nav.Link>
         </Nav>

@@ -1,11 +1,14 @@
 import React from 'react';
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-
-export default function about() {
+const About = () => {
   return (
     <Layout>
-      <h3>about</h3>
+      <SEO title="About" />
+      <h1>About–</h1>
     </Layout>
   );
 }
+
+export default About;

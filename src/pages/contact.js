@@ -1,11 +1,12 @@
 import React from 'react';
 import Layout from "../components/layout"
-
+import SEO from "../components/seo"
 
 export default function contact() {
   return (
     <Layout>
-      <h1>contact me</h1>
+      <SEO title="Contact" />
+      <h1>Contact Me–</h1>
     </Layout>
   );
 }

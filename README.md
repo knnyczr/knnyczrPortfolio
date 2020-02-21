@@ -5,7 +5,7 @@
 </p>
 
 # 👋 Hello nosey developer
-  My name is Kenneth Cruz, I'm a plant dad 🍀 , dog dad 🐶, and aquarium enthusist 🐠. (and yes I love using emojis, it adds color and tone to these boring md files 🤷‍♂️)<br><br> 
+  My name is Kenneth Cruz, I'm a plant dad 🍀 , dog dad 🐶, and aquarium enthusist 🐠. And yes I love using emojis, it adds color and tone to these boring md files 🤷‍♂️<br><br> 
   I'm from native New Yorker, I'm a graphic designer and software engineer. This is the source code for my personal portfolio, it provides a collection of my work, sculpture, print work, branding, UX/UI work and developer work.
 
 ## 😈 Gatsby!

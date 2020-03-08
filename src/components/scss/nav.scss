@@ -2,7 +2,16 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+
+@font-face {
+    font-family: Operator;
+    src: url("../../fonts/OperatorMonoLig-Book.otf") format("opentype");
+}
+@font-face {
+    font-family: OperatorItalic;
+    src: url("../../fonts/OperatorMonoLig-BookItalic.otf") format("opentype");
+}
+
 
 nav.navbar {
     float: right; 
@@ -17,5 +26,3 @@ nav.navbar {
         margin: .5em; 
     }
 }
-
-// @import "bootstrap";

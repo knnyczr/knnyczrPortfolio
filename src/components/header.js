@@ -9,7 +9,6 @@ import "../components/scss/header.scss"
 const Header = ({ siteTitle, logo }) => (
   <header
     style={{
-      // background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >

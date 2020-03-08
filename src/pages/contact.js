@@ -6,7 +6,7 @@ export default function contact() {
   return (
     <Layout>
       <SEO title="Contact" />
-      <h1>Contact Me–</h1>
+      <h1>{`<ContactMe />`}</h1>
     </Layout>
   );
 }

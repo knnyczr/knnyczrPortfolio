@@ -1,0 +1,28 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+.about {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    img{
+        width: 80%;
+    }
+    section{
+        margin: 1rem
+    }
+    section:nth-child(2) {
+        margin: 2em 0;
+    }
+}
+
+
+
+@media (min-width: 0) and (max-width: #{$tablet-width - 1px}) {
+    .about{
+        grid-template-columns: 1fr;
+        img{
+            margin: 0 auto;
+            width: 70%;
+        }
+    }
+}

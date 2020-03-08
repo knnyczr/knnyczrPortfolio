@@ -1,16 +1,18 @@
 [
     {
-        "title": "365 Posters", 
-        "description": "One poster everyday for a year to develop aesthetics, refine story telling, and share beautiful design.", 
+        "title":"365 Posters",
+        "description": "One poster everyday for a year to develop aesthetics, refine story telling, and share beautiful design.",
         "summary": "One poster everyday for a year to develop aesthetics, refine story telling, and share beautiful design. Each have their own narrative, a cross between fantasy and reality. Some created overlap and combine to make an overarching theme, they create mini series. All posters were created using Photoshop, and Illustrator. I throughout the year I felt inspired by my daily, political, and musical climate. I combine photography (provided by unsplash) typograpghy, and color creating unique narrative. Free download available of all the Hi-Def posters, perfect home screen for your iPhone or IPad.",
-        "hero": "",
+        "hero": "https://res.cloudinary.com/dnohg4hf0/image/upload/v1583640611/heroImages/lwcbxocbcgc901ujlshf.jpg",
         "tools": [
             "Photoshop", 
             "Illustrator", 
             "InDesign"
         ], 
-        "links": []
-    },
+        "links": [
+            {"github":"seomthing.com"}
+        ]
+    }, 
     {
         "title": "Tola", 
         "description": "Branding Project for a startup Robotics Company", 
@@ -34,12 +36,12 @@
         "links": [
             {"view project": "https://ps-10k-faces.herokuapp.com/"}
         ]
-    },
+    }, 
     {
         "title": "Amy's Place", 
         "description": "Amy's Place is a local diner in localed in downtown Buffalo known for it's vegan/vegetarian/meat lover's menu.", 
         "summary": "Amy's Place is a local diner in localed in downtown Buffalo known for it's vegan/vegetarian/meat lover's menu. Most of it's menu is customizable to meet everyone's needs. From the beginning the goal was to combine the experience you get from walking into the charming diner to it's outdated stationaries. The creative process was divided into several steps, each requiring critical solutions. The color palette as well as the typefaces were chosen based on the overall brand strategy.",
-        "hero": "",
+        "hero": "https://res.cloudinary.com/dnohg4hf0/image/upload/v1583640611/heroImages/sc5huxjdqoajxjjdjtiz.png",
         "tools": [
             "Photoshop", 
             "Illustrator", 
@@ -117,12 +119,13 @@
     {
         "title": "Senior Thesis", 
         "description": "(2016) Mixed media Experimental sculptural work for Senior Thesis show features self made benches, seven T8 lights, and printed color gradients.",
-        "summary": "",
-        "hero": "",
+        "summary": 
+            "",
+        "hero": "https://res.cloudinary.com/dnohg4hf0/image/upload/v1583640611/heroImages/kuaecduaf2xs3ysyu5yx.jpg",
         "tools": [
             "Illustrator", 
             "Wood"
         ], 
         "links": []
-    },
+    }
 ]

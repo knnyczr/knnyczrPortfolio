@@ -9,6 +9,10 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  p {
+    font-family: Operator;
+    font-size: 1em;
+  }
 }
 main, footer {
   padding: 1.45rem 3rem;

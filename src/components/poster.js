@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 
 
 const Poster = ({ poster }) => {
-    // console.log(poster)
     return (
         <Image 
             className="posterClass"

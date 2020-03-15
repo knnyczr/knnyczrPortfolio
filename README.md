@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="src/images/logo/logo.svg" width="300" />
+  <a href="https://www.knnyczr.com">
+    <img alt="knnyczr logo" src="data/images/logo/logo.svg" width="300" />
   </a>
 </p>
 

@@ -4,8 +4,7 @@ import Layout from "../../components/layout"
 import { Card } from 'react-bootstrap'
 import SEO from "../../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
-
-// import works from "../../components/works"
+import Img from 'gatsby-image'
 
 const Index = () => {
 
@@ -17,10 +16,16 @@ const Index = () => {
             title
             description
             summary
-            hero
             tools
             links{
               github
+            }
+            image {
+              childImageSharp{
+                fluid(maxWidth: 2000){
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
@@ -32,17 +37,19 @@ const Index = () => {
 // trying to use gatsby-config > lines 10 - 16
 // after querying json then loop over array to display works, pass json data onto other routes/component pages. 
 // each component will expect proptypes
+  const projects = data.allDataJson.edges;
   return (
     <Layout>
-    {console.log(data.allDataJson)}
+    {console.log(projects)}
       <SEO title="Works" />
       <h1>{`<Works />`}</h1>
-
         {
-          data.allDataJson.edges.map((works, index) => (
+          projects.map((works, index) => (
             <Card border="light" key={works.node.id}>
              <Link to={`works/${works.node.name}`}>
-                <Card.Img variant="top" src={works.node.hero} />
+                {/* <Card.Img variant="top" src={works.node.image.childImageSharp.fluid.src} /> */}
+                {/* <Image fluid={works.node.image.childImageSharp.fluid} /> */}
+                <Img fluid={works.node.image.childImageSharp.fluid.src} />
               </Link>
               <Card.Body>
                 <Link to={`works/${works.node.name}`}>

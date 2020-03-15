@@ -49,7 +49,7 @@ const Index = () => {
              <Link to={`works/${works.node.name}`}>
                 {/* <Card.Img variant="top" src={works.node.image.childImageSharp.fluid.src} /> */}
                 {/* <Image fluid={works.node.image.childImageSharp.fluid} /> */}
-                <Img fluid={works.node.image.childImageSharp.fluid.src} />
+                {/* <Img fluid={works.node.image.childImageSharp.fluid.src} /> */}
               </Link>
               <Card.Body>
                 <Link to={`works/${works.node.name}`}>

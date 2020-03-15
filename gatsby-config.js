@@ -12,14 +12,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `json`,
-        path: `./src/data`,
+        path: `./data`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `./data/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -33,7 +33,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/icons/favicon.svg`, // This path is relative to the root of the site.
+        icon: `data/icons/favicon.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -20,13 +20,13 @@ const Index = () => {
             links{
               github
             }
-            image {
-              childImageSharp{
-                fluid(maxWidth: 2000){
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            # image {
+            #   childImageSharp{
+            #     fluid(maxWidth: 2000){
+            #       ...GatsbyImageSharpFluid
+            #     }
+            #   }
+            # }
           }
         }
       }

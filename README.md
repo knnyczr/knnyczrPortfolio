@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.knnyczr.com" style="width: 50%;">
-    <img src="./data/icons/faviconBlack.svg" />
+    <img src="./data/icons/faviconBlack.svg" style="width: 45%;"/>
   </a>
 </p>
 

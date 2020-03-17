@@ -6,12 +6,30 @@
 
 # 👋 Hello nosey developer
 
-  My name is Kenneth Cruz, I'm a plant dad 🍀 , dog dad 🐶, and aquarium enthusist 🐠. And yes I love using emojis, it adds color and tone to these boring md files 🤷‍♂️<br><br> 
+  My name is Kenneth Cruz, I'm a plant dad 🍀 , dog dad 🐶, and aquarium enthusist 🐠. And yes I love using emojis, it adds color and tone to these boring md files 🤷‍♂️
+  <br>
+  <br> 
   I'm from native New Yorker, I'm a graphic designer and software engineer. This is the source code for my personal portfolio, it provides a collection of my work, sculpture, print work, branding, UX/UI work and developer work.
 
 ## 😈 Gatsby
 
-I love JavaScript! React is my main go-to tool. So I decided to work with Gatsby to showcase my work's collection. Gatsby provides lots of new age tools that spiked my interest–more to come on this topic.
+I love JavaScript! React is my main go-to tool. So I decided to work with Gatsby to showcase my work's collection.
+<br>
+<br>
+
+Gatsby is a React framework that serves up static files for the client. 
+<br><br>
+
+Benefits:
+
+
+1. Loads data from site's source using GraphQL to generate static assets
+2. Performance tuning
+   1. example: you have a 1000px * 1000px image Gatsby will worry about serving up the best version of that image for small screens, to desktop size and resolution
+3. Static assents lets you deploy to any CDN
+4. This static site will Re-hydrate into a React app in any Browser! 😈
+
+![](data/icons/gatsby-breakdown.png)
 
 ## Folder Structure and Component Architecture
 
@@ -19,7 +37,7 @@ I love JavaScript! React is my main go-to tool. So I decided to work with Gatsby
 
 ### data 📁
 
-<details><summary> expand </summary>
+<details><summary>🍬</summary>
 
 1. This folder holds a *data.json*
    1. This holds all my works in an array of objects to later use in my `works/index.js` component
@@ -87,10 +105,22 @@ I love JavaScript! React is my main go-to tool. So I decided to work with Gatsby
 
 ### fonts 📁
 
-1. This is a folder for my preferred font for this site. *OperatorMono* for paragraphs; 
+<details><summary>Fonts used </summary>
+
+1. This is a folder for my preferred font for this site. *OperatorMono* for paragraphs. 
 2. NOTE: loading Roboto from google fonts in the layout.scss
 
+</details>
+
 ### pages 📁
+
+<details><summary>index.js </summary>
+
+   1. This is the landing page
+   2. staticQuery for json obj for the landing carrousel
+      1. json object provides links to those featured projects through the work's title and image. 
+
+</details>
 
 <details><summary>404.js </summary>
 
@@ -102,6 +132,44 @@ I love JavaScript! React is my main go-to tool. So I decided to work with Gatsby
 <details><summary>about.js </summary>
 
    1. StaticQuery from Images to find `self`
-   2. Gives an About me. 
+   2. Gives an About me.
 
 </details>
+
+<details><summary>contact.js </summary>
+
+   1. 
+
+</details>
+
+### gatsby-browser 📄
+
+<details><summary>🍬</summary>
+
+   1. Helps load bootstrap onto the react-app
+
+</details>
+
+### gatsby-config 📄
+
+This is where the 💰 is. Plugins is Gatsby uses to load, transpile, improve performance and also sets the favicon for  the site.
+
+> NOTE: When plugins DONT require options the plugin can just be passed in the array
+>
+> NOTE: when the plugin NEEDS or you WANT to pass it viable options you pass it as an object
+
+<details><summary>🍬</summary>
+
+   1. `gatsby-plugin-sass` transpiles into css for the browser
+   2. `gatsby-plugin-react-helmet`
+   3. `gatsby-transformer-json`, this helps GraphiQL to parse JSON into GraphQL refer to `gatsby-source-filesystem`
+   4. `gatsby-transformer-sharp` this allows us to query one high res image and create SVGs, JPEGs, PNGs, in many sizes for the screen resolution your screen will need
+   5. `gatsby-plugin-sharp` this works in partnership with it's transformer.
+   6. `gatsby-source-filesystem` this plugin is called twice. once for the json file and the second time for the images folder. this tells Gatsby where to plug in it's GraphQL db.
+   7. `gatsby-plugin-manifest` this plug in comes with gatsby built in, this sets a preset theme, start URL, and favicon.
+
+</details>
+
+### gatsby-node 📄
+
+### package-json 📄

@@ -1,6 +1,14 @@
 <p align="center">
-  <a href="https://www.knnyczr.com">
-    <img alt="knnyczr logo" src="data/icons/favicon.svg" width="300" />
+  <a href="https://www.knnyczr.com" style="width: 50%;">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+      <style type="text/css">
+        .st0{fill:#000000;}
+      </style>
+    <g>
+      <path class="st0" d="M3.93,20.7h11.2l25.8,33.9V20.7h11.9v55.1h-10.2l-26.7-35v35h-12V20.7z"/>
+      <path class="st0" d="M42.43,20.7h11.1l25.8,33.9V20.7h12v55.1h-10.3l-26.7-35v35h-11.9L42.43,20.7L42.43,20.7z"/>
+    </g>
+</svg>
   </a>
 </p>
 

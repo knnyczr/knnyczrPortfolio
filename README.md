@@ -12,3 +12,14 @@
 ## 😈 Gatsby
 
 I love JavaScript! React is my main go-to tool. So I decided to work with Gatsby to showcase my work's collection. Gatsby provides lots of new age tools that spiked my interest–more to come on this topic.
+
+## Folder Structure and Component Architecture
+
+🏛️ In this section I'll be walking through the design architecture 
+
+### data 📁
+
+<details><summary> expand </summary>
+  1. This folder holds a *data.json*
+    * this holds all my works in an array of objects to later use in my `works/index.js` component
+</details>

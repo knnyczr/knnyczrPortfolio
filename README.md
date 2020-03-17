@@ -1,14 +1,11 @@
 <p align="center">
   <a href="https://www.knnyczr.com" style="width: 50%;">
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
-      <style type="text/css">
-        .st0{fill:#000000;}
-      </style>
-    <g>
-      <path class="st0" d="M3.93,20.7h11.2l25.8,33.9V20.7h11.9v55.1h-10.2l-26.7-35v35h-12V20.7z"/>
-      <path class="st0" d="M42.43,20.7h11.1l25.8,33.9V20.7h12v55.1h-10.3l-26.7-35v35h-11.9L42.43,20.7L42.43,20.7z"/>
-    </g>
-</svg>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+    <path d="M3.9,20.7h11.2l25.8,33.9V20.7h11.9v55.1H42.6l-26.7-35v35h-12C3.9,75.8,3.9,20.7,3.9,20.7z"/>
+    <path d="M42.4,20.7h11.1l25.8,33.9V20.7h12v55.1H81l-26.7-35v35H42.4V20.7L42.4,20.7z"/>
+  </svg>
+
   </a>
 </p>
 

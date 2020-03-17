@@ -1,8 +1,8 @@
-<p align="center">
-  <a href="https://www.knnyczr.com" style="width: 50%;">
-    <img src="./data/icons/faviconBlack.svg" style="width: 45%;"/>
+<div align="center">
+  <a href="https://www.knnyczr.com">
+    <img src="./data/icons/faviconBlack.svg" width="250" alt="logo" />
   </a>
-</p>
+</div>
 
 # 👋 Hello nosey developer
 

@@ -1,8 +1,8 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { Navbar, Nav } from 'react-bootstrap'
 
-import Nav from './nav'
+// import Nav from './nav'
 import "../components/scss/header.scss"
 
 
@@ -19,16 +19,20 @@ const Header = ({ siteTitle, logo }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+      <Navbar expand="lg">
+        <Navbar.Brand href="/">
           <img src={logo} alt="kenny cruzer logo svg"/>
-        </Link>
-        <Nav />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/works">works</Nav.Link>
+            {/* <Nav.Link href="/music">music</Nav.Link> */}
+            <Nav.Link href="/about">about</Nav.Link>
+            <Nav.Link href="/contact">contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
   </header>
 )

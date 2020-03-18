@@ -1,9 +1,10 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Carousel } from 'react-bootstrap'
+import '../components/scss/landingIndex.scss'
 
 const IndexPage = () => {
 
@@ -11,7 +12,7 @@ const IndexPage = () => {
     allFile(
         filter: {
           absolutePath: { regex: "/landing/"}
-          extension: { regex: "/(jpg)|(png)/" }
+          extension: { regex: "/(png)/" }
         }
       ) {
         edges{
@@ -22,15 +23,19 @@ const IndexPage = () => {
       }
   }
   `)
-
+console.log(data)
   return(
     <Layout>
     <SEO title="Home" />
-    <Carousel>
+    <Carousel
+      style={{
+        // height: '80vh'
+      }}
+    >
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={data.allFile.edges[0].node.publicURL}
+          src={data.allFile.edges[4].node.publicURL}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -41,7 +46,7 @@ const IndexPage = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={data.allFile.edges[1].node.publicURL}
+          src={data.allFile.edges[6].node.publicURL}
           alt="Third slide"
         />
 
@@ -53,7 +58,7 @@ const IndexPage = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={data.allFile.edges[2].node.publicURL}
+          src={data.allFile.edges[7].node.publicURL}
           alt="Third slide"
         />
 

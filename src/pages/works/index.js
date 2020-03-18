@@ -20,39 +20,43 @@ const Index = () => {
             links{
               github
             }
-            # image {
-            #   childImageSharp{
-            #     fluid(maxWidth: 2000){
-            #       ...GatsbyImageSharpFluid
-            #     }
-            #   }
-            # }
+            image {
+              childImageSharp{
+                fluid(maxWidth: 2000){
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
     }
   `)
 
-// trying to load json onto this component 
-// trying to use gatsby-config > lines 10 - 16
-// after querying json then loop over array to display works, pass json data onto other routes/component pages. 
-// each component will expect proptypes
   const projects = data.allDataJson.edges;
+
   return (
     <Layout>
-    {console.log(projects)}
       <SEO title="Works" />
       <h1>{`<Works />`}</h1>
         {
-          projects.map((works, index) => (
-            <Card border="light" key={works.node.id}>
-             <Link to={`works/${works.node.name}`}>
-                {/* <Card.Img variant="top" src={works.node.image.childImageSharp.fluid.src} /> */}
-                {/* <Image fluid={works.node.image.childImageSharp.fluid} /> */}
-                {/* <Img fluid={works.node.image.childImageSharp.fluid.src} /> */}
+          projects.map(works => (
+            <Card 
+            border="light" key={works.node.id}
+            style={{
+              marginBottom: '1.5em',
+            }}
+            >
+             <Link to={`works/${works.node.title}`}>
+                <Img 
+                fluid={works.node.image.childImageSharp.fluid} 
+                style={{
+                  height: '40vh',
+                }}
+            />
               </Link>
               <Card.Body>
-                <Link to={`works/${works.node.name}`}>
+                <Link to={`works/${works.node.title}`}>
                   <Card.Title>{works.node.title}</Card.Title>
                 </Link> 
                 <Card.Text>{works.node.description}</Card.Text>
@@ -60,21 +64,6 @@ const Index = () => {
             </Card>
           ))
         }
-
-        <Card border="light">
-          <Link to="works/posters">
-            <Card.Img variant="top" src="https://images.unsplash.com/photo-1582289545106-efecf907f21e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
-          </Link> 
-          <Card.Body>
-            <Link to="works/posters">
-              <Card.Title>356 Posters</Card.Title>
-            </Link> 
-            <Card.Text>
-              One poster everyday for a year to develop aesthetics, refine story telling, and share beautiful design.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-
     </Layout>
   );
 }

@@ -33,7 +33,7 @@ Benefits:
 
 ## Folder Structure and Component Architecture
 
-🏛️ In this section I'll be walking through the design architecture 
+🏛️ In this section I'll be walking through the design architecture
 
 ### data 📁
 
@@ -44,10 +44,10 @@ Benefits:
 
 2. icons
    1. This folder holds my logo in a svg file for the site's favicon.
-   2. It also holds the favicon log in black. 
+   2. It also holds the favicon log in black.
 
 3. Images
-   1. This folder has been ignored in the .gitignore. All images are at print quality (300ppi) and should not exist on github. 
+   1. This folder has been ignored in the .gitignore. All images are at print quality (300ppi) and should not exist on github.
       1. landing
       2. logo
       3. self

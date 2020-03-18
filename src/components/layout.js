@@ -29,6 +29,28 @@ const Layout = ({ children }) => {
           }
         }
       }
+
+      allDataJson{
+        edges {
+          node {
+            title
+            description
+            summary
+            tools
+            links{
+              github
+            }
+            image {
+              childImageSharp{
+                fluid(maxWidth: 2000){
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+      
     }
   `)
 
@@ -37,10 +59,9 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} logo={data.allFile.edges[0].node.publicURL} />
       <div
+        className="inLayout"
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
-          // padding: `0 1.0875rem 1.45rem`,
         }}
       >
         <main>{children}</main>

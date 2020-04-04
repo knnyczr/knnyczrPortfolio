@@ -34,17 +34,18 @@ const Index = () => {
   `)
 
   const projects = data.allDataJson.edges;
-
+    console.log(this)
   return (
     <Layout>
       <SEO title="Works" />
       <h1>{`<Works />`}</h1>
         {
-          projects.map(works => (
+          projects.map((works, index) => (
             <Card 
-            border="light" key={works.node.id}
+            border="light" 
+            key={works.node.id}
             style={{
-              marginBottom: '1.5em',
+              marginBottom: '2em',
             }}
             >
              <Link to={`works/${works.node.title}`}>

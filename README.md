@@ -6,7 +6,7 @@
 
 # 👋 Hello nosey developer
 
-  My name is Kenneth Cruz, I'm a plant dad 🍀 , dog dad 🐶, and aquarium enthusist 🐠. And yes I love using emojis, it adds color and tone to these boring md files 🤷‍♂️
+  My name is Kenneth Cruz, I'm a plant dad 🍀 , dog dad 🐶, and aquarium enthusiast 🐠. And yes I love using emojis, it adds color and tone to these boring md files 🤷‍♂️
   <br>
   <br> 
   I'm from native New Yorker, I'm a graphic designer and software engineer. This is the source code for my personal portfolio, it provides a collection of my work, sculpture, print work, branding, UX/UI work and developer work.
@@ -17,7 +17,7 @@ I love JavaScript! React is my main go-to tool. So I decided to work with Gatsby
 <br>
 <br>
 
-Gatsby is a React framework that serves up static files for the client. 
+Gatsby is a React framework that serves up static files for the client.
 <br><br>
 
 Benefits:

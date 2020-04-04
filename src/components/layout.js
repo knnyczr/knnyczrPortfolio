@@ -50,7 +50,6 @@ const Layout = ({ children }) => {
           }
         }
       }
-      
     }
   `)
 

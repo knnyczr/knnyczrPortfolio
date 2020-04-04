@@ -23,11 +23,11 @@ const Header = ({ siteTitle, logo }) => (
         <Navbar.Brand href="/">
           <img src={logo} alt="kenny cruzer logo svg"/>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle  />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="ml-auto">
             <Nav.Link href="/works">works</Nav.Link>
-            {/* <Nav.Link href="/music">music</Nav.Link> */}
+            {/* <Nav.Link eventkey="music" href="/music">music</Nav.Link> */}
             <Nav.Link href="/about">about</Nav.Link>
             <Nav.Link href="/contact">contact</Nav.Link>
           </Nav>

@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,500&display=swap');
 
+@font-face {
+    font-family: Operator;
+    src: url("../../fonts/OperatorMonoLig-Book.otf") format("opentype");
+}
+@font-face {
+    font-family: OperatorItalic;
+    src: url("../../fonts/OperatorMonoLig-BookItalic.otf") format("opentype");
+}
+@font-face {
+    font-family: BebasNeue;
+    src: url("../../fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -20,8 +33,4 @@ body {
 }
 main, footer {
   padding: 1.45rem 3rem;
-  h1 {
-    font-family: 'Roboto', sans-serif; 
-    font-weight: 500; 
-  }
 }

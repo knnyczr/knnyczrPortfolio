@@ -1,0 +1,33 @@
+footer {
+    display: flex; 
+    flex-direction: column;
+    border-top: solid lightgray .5px; 
+    .links{
+        margin-bottom: 2em;
+        flex-direction: row;
+        a {
+            font-family: Operator;
+            font-size: .75em;
+            font-weight: 500;
+            margin-right: 1em;
+            text-transform: uppercase;
+            flex-grow:1; 
+        }
+    }
+    span {
+        flex-grow: 4;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer{
+        flex-direction: row-reverse;
+        .links{
+           display: block; 
+           flex-direction: column-reverse;
+           a{
+               font-size: 1em;
+           }
+        }
+    }
+}

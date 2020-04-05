@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import { Card } from 'react-bootstrap'
@@ -33,13 +33,14 @@ const Index = () => {
     }
   `)
 
+  // const context = useContext(DataContext)
   const projects = data.allDataJson.edges;
-    console.log(this)
   return (
     <Layout>
+      {/* <DataContext.Consumer> */}
       <SEO title="Works" />
-      <h1>{`<Works />`}</h1>
-        {
+      <h1>{`<Works>`}</h1>
+        {/* {
           projects.map((works, index) => (
             <Card 
             border="light" 
@@ -64,7 +65,9 @@ const Index = () => {
               </Card.Body>
             </Card>
           ))
-        }
+        } */}
+        <h1>{`</Works>`}</h1>
+        {/* </DataContext.Consumer> */}
     </Layout>
   );
 }

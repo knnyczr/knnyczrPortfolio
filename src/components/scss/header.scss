@@ -3,15 +3,6 @@
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
 
-@font-face {
-    font-family: Operator;
-    src: url("../../fonts/OperatorMonoLig-Book.otf") format("opentype");
-}
-@font-face {
-    font-family: OperatorItalic;
-    src: url("../../fonts/OperatorMonoLig-BookItalic.otf") format("opentype");
-}
-
 header{
     div{
         img{

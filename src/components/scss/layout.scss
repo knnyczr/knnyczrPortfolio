@@ -34,3 +34,19 @@ body {
 main, footer {
   padding: 1.45rem 3rem;
 }
+
+.dark {
+  background-color: #2a2b2d;
+  color: #fff;
+  transition: all 0.6s ease;
+  height: 100%;
+}
+.light {
+  transition: all 0.6s ease;
+  background-color: #fefefe;
+  height: 100vh;
+}
+.dark a,
+.dark a:visited {
+  color: #fff;
+}

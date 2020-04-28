@@ -1,40 +1,40 @@
-import React, { useContext } from 'react';
-import { Link } from "gatsby"
+import React from 'react';
+// import { Link } from "gatsby"
 import Layout from "../../components/layout"
-import { Card } from 'react-bootstrap'
+// import { Card } from 'react-bootstrap'
 import SEO from "../../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from 'gatsby-image'
+// import { useStaticQuery, graphql } from "gatsby"
+// import Img from 'gatsby-image'
 
 const Index = () => {
 
-  const data = useStaticQuery(graphql`
-    {
-      allDataJson{
-        edges {
-          node {
-            title
-            description
-            summary
-            tools
-            links{
-              github
-            }
-            image {
-              childImageSharp{
-                fluid(maxWidth: 2000){
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   {
+  //     allDataJson{
+  //       edges {
+  //         node {
+  //           title
+  //           description
+  //           summary
+  //           tools
+  //           links{
+  //             github
+  //           }
+  //           image {
+  //             childImageSharp{
+  //               fluid(maxWidth: 2000){
+  //                 ...GatsbyImageSharpFluid
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   // const context = useContext(DataContext)
-  const projects = data.allDataJson.edges;
+  // const projects = data.allDataJson.edges;
   return (
     <Layout>
       {/* <DataContext.Consumer> */}

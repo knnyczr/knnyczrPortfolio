@@ -147,6 +147,8 @@ Benefits:
 <details><summary>🍬</summary>
 
    1. Helps load bootstrap onto the react-app
+   2. now rendered a root wrapper for themeContext. 
+   3. Will later implement a provider for project data
 
 </details>
 

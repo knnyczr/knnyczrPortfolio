@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "knnyczr",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Kenny Cruzer's portfolio source code",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kenny Cruzer <kenny@knnyczr.com>",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "gatsby": "^2.21.0",

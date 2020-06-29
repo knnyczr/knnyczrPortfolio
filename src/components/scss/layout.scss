@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat:wght@700&display=swap');
 
 @font-face {
     font-family: Operator;
@@ -23,7 +24,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   p {
-    font-family: Operator;
+    font-family: Garamond, serif;
     font-size: 1em;
   }
   div {
@@ -33,6 +34,27 @@ body {
 }
 main, footer {
   padding: 1.45rem 3rem;
+}
+main{ 
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 15%;
+  .landing{
+    width: 150vw; 
+    overflow: hidden;
+    margin-bottom: 30px;
+    h1{
+      position: relative;
+      font-size: 3em;
+      font-family: Montserrat, Gotham, sans-serif;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+h1{
+  font-family: Montserrat, Gotham Medium, sans-serif;
 }
 
 .dark {

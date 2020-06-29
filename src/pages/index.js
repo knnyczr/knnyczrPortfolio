@@ -7,66 +7,34 @@ import { Carousel } from 'react-bootstrap'
 
 const IndexPage = () => {
 
-  const data = useStaticQuery(graphql`{
-    allFile(
-        filter: {
-          absolutePath: { regex: "/landing/"}
-          extension: { regex: "/(png)/" }
-        }
-      ) {
-        edges{
-          node {
-            publicURL
-          }
-        }
-      }
-  }
-  `)
+  // const data = useStaticQuery(graphql`{
+  //   allFile(
+  //       filter: {
+  //         absolutePath: { regex: "/landing/"}
+  //         extension: { regex: "/(png)/" }
+  //       }
+  //     ) {
+  //       edges{
+  //         node {
+  //           publicURL
+  //         }
+  //       }
+  //     }
+  // }
+  // `)
 // console.log(data)
   return(
-    <Layout>
-    <SEO title="Home" />
-    <Carousel
-      style={{
-        // height: '80vh'
-      }}
-    >
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={data.allFile.edges[4].node.publicURL}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={data.allFile.edges[6].node.publicURL}
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={data.allFile.edges[7].node.publicURL}
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+  <Layout>
+  <SEO title="Home" />
+  <div className="landing">
+    <h1>Visual Artist</h1>
+    <h1>Typography</h1>
+    <h1>Print Work</h1>
+    <h1>Branding</h1>
+    <h1>Software Development</h1>
+    <h1>UI/UX</h1>
+    <h1>Packaging Design</h1>
+  </div>
   </Layout>
   )
 }

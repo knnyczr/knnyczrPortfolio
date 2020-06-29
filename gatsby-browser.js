@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import React from "react"
+import React from "react";
 
 import { ThemeProvider } from "./src/context/ThemeContext"
 

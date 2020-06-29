@@ -22,7 +22,7 @@ const Header = ({ siteTitle, logo }) => (
               padding: `1.45rem 1.0875rem`,
             }}
           >
-            <Navbar expand="lg">
+            {/* <Navbar expand="lg">
               <Navbar.Brand href="/">
                 <img src={theme.dark ? logo[1].node.publicURL : logo[0].node.publicURL } alt="kenny cruzer logo svg"/>
               </Navbar.Brand>
@@ -30,13 +30,12 @@ const Header = ({ siteTitle, logo }) => (
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                   <Nav.Link href="/works">works</Nav.Link>
-                  {/* <Nav.Link eventkey="music" href="/music">music</Nav.Link> */}
                   <Nav.Link href="/about">about</Nav.Link>
                   <Nav.Link href="/contact">contact</Nav.Link>
                   <Nav.Link onClick={theme.toggleDark} href="#">{theme.dark ? <span>{`lightMode()`}</span> : <span>{`darkMode()`}</span>}</Nav.Link>
                 </Nav>
               </Navbar.Collapse>
-            </Navbar>
+            </Navbar> */}
           </div>
         </header>
       )

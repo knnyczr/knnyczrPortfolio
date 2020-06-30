@@ -27,13 +27,13 @@ const IndexPage = () => {
   <Layout>
   <SEO title="Home" />
   <div className="landing">
-    <h1>Visual Artist</h1>
-    <h1>Typography</h1>
-    <h1>Print Work</h1>
-    <h1>Branding</h1>
-    <h1>Software Development</h1>
-    <h1>UI/UX</h1>
-    <h1>Packaging Design</h1>
+    <h3>Visual Artist</h3>
+    <h3>Typography</h3>
+    <h3>Print Work</h3>
+    <h3>Branding</h3>
+    <h3>Software Development</h3>
+    <h3>UI/UX</h3>
+    <h3>Packaging Design</h3>
   </div>
   </Layout>
   )

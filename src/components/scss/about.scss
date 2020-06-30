@@ -2,16 +2,19 @@ $tablet-width: 768px;
 $desktop-width: 1024px;
 
 .about {
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    img{
-        width: 80%;
-    }
     section{
-        margin: 1rem
+        display: flex;
+        margin: 0 auto;
+        img{
+            width: 90%;
+            margin: 0 auto;
+        }
     }
-    section:nth-child(2) {
-        margin: 2em 0;
+    div{
+        h2{
+            text-align: start;
+        }
+        margin: 1rem 0;
     }
 }
 

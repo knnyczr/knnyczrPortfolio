@@ -7,7 +7,6 @@ import Header from "./header"
 import Footer from "./Footer"
 import "./scss/layout.scss"
 
-// library.add(fab, faCheckSquare, faCoffee)
 
 const Layout = ({ children }) => {
   
@@ -54,16 +53,8 @@ const Layout = ({ children }) => {
         theme => (
           <div className={theme.dark ? 'dark' : 'light'}>
             <Header siteTitle={data.site.siteMetadata.title} logo={data.allFile.edges} />
-            <div
-              style={{
-                margin: `0 auto`,
-                maxWidth: 1000,
-                padding: `1.45rem 1.0875rem`,
-              }}
-            >
               <main>{children}</main>
               <Footer />
-            </div>
           </div>
         )
       }

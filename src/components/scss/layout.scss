@@ -1,18 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat:wght@700&display=swap');
-
-@font-face {
-    font-family: Operator;
-    src: url("../../fonts/OperatorMonoLig-Book.otf") format("opentype");
-}
-@font-face {
-    font-family: OperatorItalic;
-    src: url("../../fonts/OperatorMonoLig-BookItalic.otf") format("opentype");
-}
-@font-face {
-    font-family: BebasNeue;
-    src: url("../../fonts/BebasNeue-Regular.ttf") format("truetype");
-}
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 html {
   font-family: sans-serif;
@@ -24,7 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   p {
-    font-family: Garamond, serif;
+    font-family: Georgia, serif;
     font-size: 1em;
   }
   div {
@@ -34,18 +21,22 @@ body {
 }
 main, footer {
   padding: 1.45rem 3rem;
+  margin: 0 auto;
 }
 main{ 
-  height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   margin-bottom: 15%;
+  z-index: 1;
+  padding-top: 4.25rem;
   .landing{
-    width: 150vw; 
-    overflow: hidden;
+    width: 140vw; 
     margin-bottom: 30px;
-    h1{
+    margin-top: 30px;
+    h3{
+      z-index: 1;
       position: relative;
       font-size: 3em;
+      font-weight: 700;
       font-family: Montserrat, Gotham, sans-serif;
       margin-bottom: 30px;
     }
@@ -54,7 +45,10 @@ main{
 
 
 h1{
-  font-family: Montserrat, Gotham Medium, sans-serif;
+  font-family: Montserrat, GothamMedium, sans-serif;
+  font-weight: 700;
+  text-align: end;
+  font-size: 3.75em;
 }
 
 .dark {
@@ -67,6 +61,9 @@ h1{
   transition: all 0.6s ease;
   background-color: #fefefe;
   height: 100vh;
+  a, a:visited{
+   color: #2a2b2d;
+  }
 }
 .dark a,
 .dark a:visited {

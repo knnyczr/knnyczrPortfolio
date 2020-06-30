@@ -39,7 +39,7 @@ const Index = () => {
     <Layout>
       {/* <DataContext.Consumer> */}
       <SEO title="Works" />
-      <h1>{`<Works>`}</h1>
+      <h1>works</h1>
         {/* {
           projects.map((works, index) => (
             <Card 
@@ -66,7 +66,6 @@ const Index = () => {
             </Card>
           ))
         } */}
-        <h1>{`</Works>`}</h1>
         {/* </DataContext.Consumer> */}
     </Layout>
   );

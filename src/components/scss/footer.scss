@@ -2,6 +2,7 @@ footer {
     display: flex; 
     flex-direction: column;
     border-top: solid lightgray .5px; 
+    padding-bottom: 3rem;
     .links{
         display: flex; 
         flex-direction: row;
@@ -14,7 +15,6 @@ footer {
     }
     span {
         margin: 0 auto;
-        // flex-grow: 4;
     }
 }
 

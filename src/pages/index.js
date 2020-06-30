@@ -1,28 +1,9 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Carousel } from 'react-bootstrap'
 
 const IndexPage = () => {
-
-  // const data = useStaticQuery(graphql`{
-  //   allFile(
-  //       filter: {
-  //         absolutePath: { regex: "/landing/"}
-  //         extension: { regex: "/(png)/" }
-  //       }
-  //     ) {
-  //       edges{
-  //         node {
-  //           publicURL
-  //         }
-  //       }
-  //     }
-  // }
-  // `)
-// console.log(data)
   return(
   <Layout>
   <SEO title="Home" />

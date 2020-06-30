@@ -1,5 +1,4 @@
-import PropTypes, { node } from "prop-types"
-import React, { useRef, createRef, useState, useCallback } from "react"
+import React, { useState } from "react"
 import { Navbar, Nav } from 'react-bootstrap'
 
 import ThemeContext from '../context/ThemeContext'
@@ -26,7 +25,7 @@ const Header = ({ siteTitle, logo }) => {
               <Navbar variant={theme.dark ? "dark" : "light"} fixed="bottom" expand="xl" >
                 <Navbar.Toggle onClick={() => changeMenu()} style={{ backgroundColor: `${theme.dark ? "#fefefe" : "#2a2b2d"}`, color: `${theme.dark ? "#2a2b2d" : "#fefefe"}` }}>
                   {
-                    menuCheck == true ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />
+                    menuCheck === true ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />
                   }
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav" style={{ backgroundColor: `${theme.dark ? "#2a2b2d" : "#fefefe"}`}}>
@@ -43,15 +42,6 @@ const Header = ({ siteTitle, logo }) => {
       }
     </ThemeContext.Consumer>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-  logo:  PropTypes.array,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header

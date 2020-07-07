@@ -9,7 +9,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
 
-const Header = ({ siteTitle, logo }) => {
+const Header = ({ logo }) => {
   const [menuCheck, setmenuCheck] = useState(false)
 
   const changeMenu = () => {

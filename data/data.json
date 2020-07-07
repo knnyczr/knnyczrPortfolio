@@ -4,6 +4,10 @@
         "description": "One poster everyday for a year to develop aesthetics, refine story telling, and share beautiful design.",
         "summary": "One poster everyday for a year to develop aesthetics, refine story telling, and share beautiful design. Each have their own narrative, a cross between fantasy and reality. Some created overlap and combine to make an overarching theme, they create mini series. All posters were created using Photoshop, and Illustrator. I throughout the year I felt inspired by my daily, political, and musical climate. I combine photography (provided by unsplash) typograpghy, and color creating unique narrative. Free download available of all the Hi-Def posters, perfect home screen for your iPhone or IPad.",
         "image": "./images/landing/poster.jpg",
+        "type": [
+            "Digital Art", 
+            "Print Work"
+        ],
         "tools": [
             "Photoshop", 
             "Illustrator", 
@@ -18,6 +22,11 @@
         "description": "Branding Project for a startup Robotics Company", 
         "summary": "",
         "image": "./images/landing/tola.png",
+        "type": [
+            "Branding",
+            "Digital Art", 
+            "Print Work"
+        ],
         "tools": [
             "Photoshop", 
             "Illustrator", 
@@ -30,6 +39,9 @@
         "description": "Per Scholas has launched 10,000 tech careers, in celebration they launched a site to drive ", 
         "summary": "",
         "image": "./images/landing/lights.jpg",
+        "type": [
+            "Software Development"
+        ],
         "tools": [
             "React"
         ], 
@@ -42,6 +54,11 @@
         "description": "Amy's Place is a local diner in localed in downtown Buffalo known for it's vegan/vegetarian/meat lover's menu.", 
         "summary": "Amy's Place is a local diner in localed in downtown Buffalo known for it's vegan/vegetarian/meat lover's menu. Most of it's menu is customizable to meet everyone's needs. From the beginning the goal was to combine the experience you get from walking into the charming diner to it's outdated stationaries. The creative process was divided into several steps, each requiring critical solutions. The color palette as well as the typefaces were chosen based on the overall brand strategy.",
         "image": "./images/landing/amys.png",
+        "type": [
+            "Branding",
+            "Digital Art", 
+            "Print Work"
+        ],
         "tools": [
             "Photoshop", 
             "Illustrator", 
@@ -54,6 +71,10 @@
         "description": "The Spectrum is an independent student publication at the University at Buffalo campus. This project features the best works I've done while Creative Director.", 
         "summary": "The Spectrum is an independent student publication at the University at Buffalo campus. It began it's publication in 1950, it's student run till this day with a full staff of incredible and enthusiastic writers, editors, photographers, advertisers, along with a amazing creative desk that was my second home. As part of the creative desk we worked closely with writers and photographers to coordinate three issues a week during the annual school year. Full version PDFs are posted on issuu consistently they can be viewed in the Newspaper's site (Some pages include ads, these are NOT created by me) These issues feature cover designs, profiles, infographs, with designs made by, or co-created by me.",
         "image": "./images/landing/spectrum.png",
+        "type": [
+            "Digital Art", 
+            "Print Work"
+        ],
         "tools": [
             "Photoshop", 
             "Illustrator", 
@@ -66,6 +87,9 @@
         "description": "This is an educational app for developers and designers to learn about colors, and color relationships through a dynamic color picker.", 
         "summary": "",
         "image": "./images/landing/pal_et.png",
+        "type": [
+            "Software Development"
+        ],
         "tools": [
             "React.js", 
             "Express.js", 
@@ -79,6 +103,9 @@
         "description": "I love hue is the original single player game that makes puzzles out of gradients. This game is a clone of called HueClone.", 
         "summary": "",
         "image": "./images/landing/ilovehue.png",
+        "type": [
+            "Software Development"
+        ],
         "tools": [
             "jQuery"
         ], 
@@ -89,6 +116,9 @@
         "description": "Classic game of tictactoe, with a modern clean red/blue theme. Play with a friend!", 
         "summary": "",
         "image": "./images/landing/tictactoe.png",
+        "type": [
+            "Software Development"
+        ],
         "tools": [
             "jQuery"
         ], 
@@ -99,6 +129,9 @@
         "description": "A 'U' friendly digital space to allow it's user to express your 'U'-ness. A blog that allows you to upload snippets of your life and both with other over stuff you love.", 
         "summary": "",
         "image": "./images/landing/ulog.png",
+        "type": [
+            "Software Development"
+        ],
         "tools": [
             "Express.js",
             "Bulma"
@@ -110,6 +143,9 @@
         "description": "LIKWID is a fictional cold press bottled juice company. This is an experimental branding project featuring packaging design, company brand, and advertising.", 
         "summary": "",
         "image": "./images/landing/likwid.png",
+        "type": [
+            "Branding"
+        ],
         "tools": [
             "Photoshop", 
             "Illustrator"
@@ -122,6 +158,10 @@
         "summary": 
             "",
         "image": "./images/landing/seniorThesis.jpg",
+        "type": [
+            "Digital Art", 
+            "Thesis"
+        ],
         "tools": [
             "Illustrator", 
             "Wood"

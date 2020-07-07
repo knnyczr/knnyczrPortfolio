@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "gatsby"
 import Layout from "../../components/layout"
-// import { Card } from 'react-bootstrap'
+import Menu from '../../components/worksMenu'
 import SEO from "../../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image';
 import '../../components/scss/works.scss'
 
+// import {worksPage} from '../../components/fragments'
+
 const Index = () => {
+
+
   const data = useStaticQuery(graphql`
     {
       allDataJson{
@@ -17,7 +21,8 @@ const Index = () => {
             description
             summary
             tools
-            links{
+            type
+            links {
               github
             }
             image {
@@ -33,22 +38,32 @@ const Index = () => {
     }
   `)
   const projects = data.allDataJson.edges
-  console.log(projects)
+
+  const [uniqueTypes, setUniqueTypes] = useState([])
+  const [displayProjects, setdisplayProjects] = useState(projects)
+
+  useEffect(() => {
+    const onlyUniques = (value, indx, array) => array.indexOf(value) === indx;
+
+    // this maps over project types, flattens the two dimensional array, and then filters by unique types
+    console.log(projects.map((work, index)=> work.node.type))
+    const projectTypes = projects.map((work, index)=> work.node.type).flat().filter(onlyUniques)
+    setUniqueTypes(projectTypes)
+  }, [projects])
+
   return (
     <Layout>
       <SEO title="Works" />
       <div className="works">
         <h1>work</h1>
-        <ul>
-          <li>All</li>
-          <li>Branding</li>
-          <li>Digital Art</li>
-          <li>Print Work</li>
-          <li>Software Development</li>
-        </ul>
+        <Menu types={uniqueTypes}  />
         {
-          projects.map((project, index) => (
-            <Link to={`works/${project.node.title}`}>
+          displayProjects &&
+          displayProjects.map((project, index) => (
+            <Link 
+              // to={`works/${project.node.title}`}
+              key={`works_${index}_${project.node.title}`}
+              >
                 <Img 
                   fluid={project.node.image.childImageSharp.fluid} 
                   style={{

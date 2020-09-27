@@ -10,10 +10,24 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout`),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
+        path: `./data`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        name: `markdown-pages`,
         path: `./data`,
       },
     },

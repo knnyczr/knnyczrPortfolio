@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -8,8 +8,8 @@ import Footer from "./Footer"
 import "./scss/layout.scss"
 
 
-const Layout = ({ children }) => {
-  
+
+const Layout = ({ children }) => {  
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -49,6 +49,7 @@ const Layout = ({ children }) => {
   `)
   return (
     <ThemeContext.Consumer>
+
       {
         theme => (
           <div className={theme.dark ? 'dark' : 'light'}>

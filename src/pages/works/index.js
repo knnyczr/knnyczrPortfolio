@@ -7,10 +7,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image';
 import '../../components/scss/works.scss'
 
-// import {worksPage} from '../../components/fragments'
 
 const Index = () => {
-
 
   const data = useStaticQuery(graphql`
     {
@@ -52,30 +50,28 @@ const Index = () => {
   }, [projects])
 
   return (
-    <Layout>
+    <div className="works">
       <SEO title="Works" />
-      <div className="works">
-        <h1>work</h1>
-        <Menu types={uniqueTypes}  />
-        {
-          displayProjects &&
-          displayProjects.map((project, index) => (
-            <Link 
-              // to={`works/${project.node.title}`}
-              key={`works_${index}_${project.node.title}`}
-              >
-                <Img 
-                  fluid={project.node.image.childImageSharp.fluid} 
-                  style={{
-                    height: '20vh',
-                  }}
-                />
-                <h2>{project.node.title}</h2>
-            </Link>
-          ))
-        }
-      </div> 
-    </Layout>
+      <h1>work</h1>
+      <Menu types={uniqueTypes}  />
+      {
+        displayProjects &&
+        displayProjects.map((project, index) => (
+          <Link 
+            // to={`works/${project.node.title}`}
+            key={`works_${index}_${project.node.title}`}
+            >
+              <Img 
+                fluid={project.node.image.childImageSharp.fluid} 
+                style={{
+                  height: '20vh',
+                }}
+              />
+              <h2>{project.node.title}</h2>
+          </Link>
+        ))
+      }
+    </div> 
   );
 }
 

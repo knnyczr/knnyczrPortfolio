@@ -21,7 +21,9 @@ const Header = ({ logo }) => {
       {
         theme => (
             <header>
-              <img src={theme.dark ? logo[1].node.publicURL : logo[0].node.publicURL } alt="kenny cruzer logo svg"/>
+              <a href="/">
+                <img src={theme.dark ? logo[1].node.publicURL : logo[0].node.publicURL } alt="kenny cruzer logo svg"/>
+              </a>
               <Navbar variant={theme.dark ? "dark" : "light"} fixed="bottom" expand="xl" >
                 <Navbar.Toggle onClick={() => changeMenu()} style={{ backgroundColor: `${theme.dark ? "#fefefe" : "#2a2b2d"}`, color: `${theme.dark ? "#2a2b2d" : "#fefefe"}` }}>
                   {
@@ -33,7 +35,9 @@ const Header = ({ logo }) => {
                     <Nav.Link href="/works">works</Nav.Link>
                     <Nav.Link href="/about">about</Nav.Link>
                     <Nav.Link href="/contact">contact</Nav.Link>
-                    <Nav.Link onClick={theme.toggleDark} href="#">{theme.dark ? <span>{`lightMode()`}</span> : <span>{`darkMode()`}</span>}</Nav.Link>
+                    <Nav.Link onClick={theme.toggleDark} href="#">
+                      {theme.dark ? <span>{`lightMode()`}</span> : <span>{`darkMode()`}</span>}
+                    </Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
               </Navbar>

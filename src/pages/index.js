@@ -10,7 +10,6 @@ const IndexPage = () => {
     <SEO title="Home" />
       <p>
         Hello world, my name is <span>Kenneth Cruz</span>. I'm a 
-        {/* <span>Visual Artist</span>,  */}
         <ReactTypingEffect
           speed={100}
           typingDelay={200}

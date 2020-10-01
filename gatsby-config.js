@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `knnyczr`,
@@ -39,13 +43,22 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `${process.env.CONTENTFUL_SPACE_ID}`,
+        // Learn about environment variables: https://gatsby.app/env-vars
+        accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+        downloadLocal: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `knnyczr`,
+        short_name: `knnyczry portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        // background_color: `#663399`,
+        // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `data/icons/favicon.svg`, // This path is relative to the root of the site.
       },

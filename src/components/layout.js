@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -21,27 +21,6 @@ const Layout = ({ children }) => {
         edges {
           node {
             publicURL
-          }
-        }
-      }
-
-      allDataJson{
-        edges {
-          node {
-            title
-            description
-            summary
-            tools
-            links{
-              github
-            }
-            image {
-              childImageSharp{
-                fluid(maxWidth: 2000){
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
         }
       }

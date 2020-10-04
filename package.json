@@ -1,6 +1,7 @@
 {
   "name": "knnyczr",
   "private": true,
+  "homepage": "https://knnyczr.com/",
   "description": "Kenny Cruzer's portfolio source code",
   "version": "0.1.0",
   "author": "Kenny Cruzer <kenny@knnyczr.com>",
@@ -31,6 +32,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.10.0",
+    "react-responsive": "^8.1.0",
     "react-typing-effect": "^2.0.3",
     "sharp": "^0.25.2"
   },

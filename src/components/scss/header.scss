@@ -45,6 +45,9 @@ header{
             height: 4rem;
         }
     }
+    #basic-navbar-nav{
+        background-color: rgba(0,0,0,0) ;
+    }
     .navbar-nav{
         margin-right: 4%;
         a.nav-link {
@@ -62,6 +65,9 @@ header{
             height: 3rem;
             margin: 70px;
         }
+    }
+    #basic-navbar-nav{
+        background-color: rgba(0,0,0,0) ;
     }
     .navbar-nav{
         margin-right: 4%;

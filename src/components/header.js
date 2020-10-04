@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react";
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'gatsby'
 import ThemeContext from '../context/ThemeContext'
+import { useMediaQuery } from 'react-responsive'
+
 import "../components/scss/header.scss"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,14 +12,14 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
 const Header = ({ logo }) => {
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+
 
   const [menuCheck, setmenuCheck] = useState(false)
 
   const changeMenu = () => {
     setmenuCheck(!menuCheck)
   }
-
-  const size = useWindowSize();
 
   return(
     <ThemeContext.Consumer>
@@ -29,9 +31,7 @@ const Header = ({ logo }) => {
               </Link>
               <Navbar 
                 variant={theme.dark ? "dark" : "light"} 
-                fixed={
-                  size.width >= 768 ? 'top' : 'bottom'
-                }
+                fixed={isMobile ? 'bottom' : 'top'}
                 expand="md" 
               >
                 <Navbar.Toggle 
@@ -47,15 +47,7 @@ const Header = ({ logo }) => {
                 </Navbar.Toggle>
                 <Navbar.Collapse 
                   id="basic-navbar-nav" 
-                  style={{ 
-                    backgroundColor: `
-                    ${
-                      size.width >= 768 ?
-                        `rgba(0,0,0,0)`
-                      :
-                      !theme.dark ? "#fefefe" : "#2a2b2d"
-                    }
-                    `, 
+                  style={{
                     color: `${theme.dark ? "#2a2b2d" : "#fefefe"}` 
                     }}
                   >
@@ -77,36 +69,3 @@ const Header = ({ logo }) => {
 }
 
 export default Header
-
-
-// found this code @ https://usehooks.com/useWindowSize/
-function useWindowSize() {
-  // Initialize state with undefined width/height so server and client renders match
-  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
-
-  useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-    
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-    
-    // Call handler right away so state gets updated with initial window size
-    handleResize();
-    
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize);
-  }, []); // Empty array ensures that effect is only run on mount
-
-  return windowSize;
-}

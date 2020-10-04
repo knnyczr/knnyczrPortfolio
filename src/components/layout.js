@@ -1,10 +1,12 @@
 import React from "react"
+import Header from "./header"
+import Footer from "./Footer"
+
+import ThemeContext from '../context/ThemeContext'
+
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import ThemeContext from '../context/ThemeContext'
-import Header from "./header"
-import Footer from "./Footer"
 import "./scss/layout.scss"
 
 
@@ -28,13 +30,12 @@ const Layout = ({ children }) => {
   `)
   return (
     <ThemeContext.Consumer>
-
       {
         theme => (
           <div className={theme.dark ? 'dark' : 'light'}>
             <Header siteTitle={data.site.siteMetadata.title} logo={data.allFile.edges} />
-              <main>{children}</main>
-              <Footer />
+            <main>{children}</main>
+            <Footer />
           </div>
         )
       }

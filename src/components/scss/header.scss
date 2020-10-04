@@ -6,11 +6,9 @@
 
 header{
     position: fixed;
-    height: 100vh; 
     z-index: 1;
     img{
-        margin: 30px;
-        top: 10px; 
+        margin: 25px 20px;
         height: 2em;
     }
     nav, .navbar{
@@ -29,11 +27,49 @@ header{
                 font-family: "Montserrat", "Gotham", "Arial Bold", sans-serif;
                 font-weight: 700;
                 font-size: 2.75em;
-                height: 20%;
                 text-align: end;
             }
         }
 
     }
     
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    header{
+        .logo{
+            margin: 30px;
+            height: 4rem;
+        }
+    }
+    .navbar-nav{
+        margin-right: 4%;
+        a.nav-link {
+            font-size: 1.25rem !important;
+            padding: 0 !important;
+            margin: 20px 10px;
+            mix-blend-mode: difference;
+        }
+    }
+}
+
+@media only screen and (min-width : 1024px) {
+    header{
+        .logo {
+            height: 3rem;
+            margin: 70px;
+        }
+    }
+    .navbar-nav{
+        margin-right: 4%;
+        a.nav-link {
+            font-size: 1.5rem !important;
+            padding: 0 !important;
+            margin: 15px 10px;
+            mix-blend-mode: difference;
+        }
+    }
 }

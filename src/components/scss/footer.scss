@@ -1,28 +1,52 @@
 footer {
+    font-family: Montserrat, sans-serif;
     border-top: solid lightgray .5px; 
-    padding-bottom: 3rem;
+    height: 20vh;
     text-align: center;
+    font-weight: 400;
     .links{
-        text-align: center;
+        width: 80%;
+        margin: 2% auto;
+        display: flex; 
+        justify-content: space-around;
         margin-bottom: 1.5em;
         a {
-            font-size: 2em;
-            margin-right: .5em;
+            font-size: 2rem;
         }
     }
     span {
-        margin-bottom: .5em;
+        margin-bottom: .5rem;
         text-align: center;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
     footer{
         .links{
-           display: block; 
+            width: 90%;
+            padding: 0 20%;
            a{
-               font-size: 2.5em;
+               font-size: 2.5rem;
            }
+        }
+    }
+}
+
+@media only screen and (min-width : 1024px) {
+    footer {
+        height: 30vh;
+        .links {
+            width: 70%;
+            margin: 5% auto;
+            a {
+                font-size: 2.5rem;
+            }
+            span{
+                margin-top: 1rem;
+            }
         }
     }
 }

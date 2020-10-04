@@ -1,6 +1,48 @@
 .design{
     margin: 7% 0;
-    image{
-        width: 50%; 
+    .images{
+        .gatsby-image-wrapper{
+            margin-bottom: 3%;
+        }
     }
+    h2 {
+        font-size: 2rem;
+        font-family: Montserrat, sans-serif;
+        font-weight: 700;
+    }
+    h6 {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-style: italic;
+    }
+    p{
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+   .design {
+        margin: 7% 5%;
+       .images{
+        .gatsby-image-wrapper{
+            max-height: 40vh;
+            margin-right: 10px;
+            background-size: cover;
+        }
+       }
+       h2 {
+           font-size: 3rem;
+           margin-bottom: 3%;
+       }
+       p{
+           font-size: 1.275rem;
+       }
+   }
+}
+
+@media only screen and (min-width : 1025px) {
+    
 }

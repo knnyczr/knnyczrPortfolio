@@ -5,6 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
       const artWork = path.resolve('./src/components/artWork.js')
+      const previewPage = path.resolve('./src/components/pagePreview.js')
       resolve(graphql(`
         {
           allContentfulWork{
@@ -30,6 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           })
         })
+        
       })
     )
   })

@@ -23,22 +23,22 @@ const About = () => {
   `)
 
   return (
-    <div className="about">
+    <>
       <SEO title="About" />
-      <h1>about</h1>
-      <section>
+      <h1 className="about">about</h1>
+      <div className="innerAbout">
         <Image src={data.allFile.edges[0].node.publicURL} roundedCircle thumbnail/>
-      </section>
-      <div>
-        <h2>Kenny Cruzer</h2>
-        <p>
-          My name is Kenneth Cruz, but my friends call me Kenny. I am a dog dad, plant dad, and an aquarium enthusiast. I was born and raised in NYC. I’m a Full Stack Developer and Graphic Designer with three years of real-world experience designing and building innovative products. 
-          <br />
-          <br />
-          I’ve co-taught five successful cohorts on full-stack technologies; with an average hiring rate of 91.9% within 6 months after graduation. I specialize in Branding, UI/UX Design, Design for Social Media, Packaging Design and related Visual Communication for Branding.
-        </p>
+        <div>
+          <h2>Kenny Cruzer</h2>
+          <p>
+            My name is Kenneth Cruz, but my friends call me Kenny. I am a dog dad, plant dad, and an aquarium enthusiast. I was born and raised in NYC. I’m a Full Stack Developer and Graphic Designer with three years of real-world experience designing and building innovative products. 
+            <br />
+            <br />
+            I’ve co-taught five successful cohorts on full-stack technologies; with an average hiring rate of 91.9% within 6 months after graduation. I specialize in Branding, UI/UX Design, Design for Social Media, Packaging Design and related Visual Communication for Branding.
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

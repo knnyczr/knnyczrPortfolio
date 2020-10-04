@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from "gatsby"
-// import Layout from "../../components/layout"
-// import Menu from '../../components/worksMenu'
+import { Link } from 'gatsby'
+import ThemeContext from '../../context/ThemeContext'
+
 import SEO from "../../components/seo"
+
 import { useStaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image';
 import '../../components/scss/works.scss'
-import { Card } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 
 
 const Index = () => {
@@ -20,6 +21,8 @@ const Index = () => {
               title
               type
               medium
+              deployedLink
+              githubLink
               heroImage{
                 fluid{
                   ...GatsbyContentfulFluid
@@ -31,46 +34,69 @@ const Index = () => {
       }
     `
   )
-
-    console.log(data)
-  // const [uniqueTypes, setUniqueTypes] = useState([])
-  // const [displayProjects, setdisplayProjects] = useState(projects)
-
-  // useEffect(() => {
-  //   const onlyUniques = (value, indx, array) => array.indexOf(value) === indx;
-
-  //   // this maps over project types, flattens the two dimensional array, and then filters by unique types
-  //   console.log(projects.map((work, index)=> work.node.type))
-  //   const projectTypes = projects.map((work, index)=> work.node.type).flat().filter(onlyUniques)
-  //   setUniqueTypes(projectTypes)
-  // }, [projects])
-
+    // console.log(data)
   return (
-    <div className="works">
-      <SEO title="Works" />
-      <h1>work</h1>
-      {/* <Menu types={uniqueTypes}  /> */}
+    <ThemeContext.Consumer>
       {
-        data.allContentfulWork.edges.map((project, index) => (
-          <Link 
-            to={`/works/${project.node.url}`}
-            key={`works_${index}_${project.node.title}`}
-            >
-              <Card
-                className="text-white"
-              >
-                <Img fluid={project.node.heroImage.fluid}  alt="Card image" />
-                <Card.ImgOverlay>
-                <Card.Title>{project.node.title}</Card.Title>
-                  <Card.Text>
-                    {project.node.type}
-                  </Card.Text>
-                </Card.ImgOverlay>
-              </Card>
-          </Link>
-        ))
-      }
-    </div> 
+        theme =>(
+            <div className="works">
+              <SEO title="Works" />
+              <h1>work</h1>
+              {/* <Menu types={uniqueTypes}  /> */}
+              {
+                data.allContentfulWork.edges.map((project, index) => (
+                  <Card 
+                    text={theme.dark ? 'dark' : 'light'}
+                    bg={theme.dark ? 'light' : 'dark'}
+                    className="text-white"
+                    style={{
+                      
+                  }}>
+                    <Link
+                      to={`/works/${project.node.url}`}
+                    > 
+                    {
+                      project.node.heroImage ?
+                      <Img 
+                        key={`works_${index}_${project.node.title}`}
+                        fluid={project.node.heroImage.fluid}  
+                        alt="Card image" 
+                      />
+                      :
+                      false
+                      
+                    }
+                    </Link>
+                    <Card.Body>
+                      <h5
+                        style={{
+                          color: `${theme.dark ? '#2a2b2d' : '#fefefe'}`,
+                        }}
+                      >{project.node.title}</h5>
+                      <p>
+                        {project.node.type}
+                      </p>
+                      {
+                        project.node.deployedLink &&
+                        <Button 
+                          href={`${project.node.deployedLink}`}
+                          variant={theme.dark ? 'dark' : 'light'}>Live Link</Button>
+                      }
+                      {
+                        project.node.githubLink &&
+                        <Button 
+                          href={`${project.node.github}`}
+                          variant={theme.dark ? 'dark' : 'light'}>Github</Button>
+                          
+                      }
+                    </Card.Body>
+                  </Card>
+                ))
+              }
+            </div> 
+          )
+        }
+      </ThemeContext.Consumer>
   );
 }
 

@@ -48,6 +48,14 @@ const Header = ({ logo }) => {
                 <Navbar.Collapse 
                   id="basic-navbar-nav" 
                   style={{
+                    backgroundColor: `
+                    ${
+                      !isMobile ?
+                        `rgba(0,0,0,0)`
+                      :
+                      !theme.dark ? "#fefefe" : "#2a2b2d"
+                    }
+                    `,
                     color: `${theme.dark ? "#2a2b2d" : "#fefefe"}` 
                     }}
                   >

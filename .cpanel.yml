@@ -1,6 +1,5 @@
 ---
 deployment:
   tasks:
-    - gatsby build
     - export DEPLOYPATH=./public/
     - /bin/cp -R $DEPLOYPATH

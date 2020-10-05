@@ -34,7 +34,6 @@ const Index = () => {
       }
     `
   )
-    // console.log(data)
   return (
     <ThemeContext.Consumer>
       {
@@ -42,7 +41,6 @@ const Index = () => {
             <div className="works">
               <SEO title="Works" />
               <h1>work</h1>
-              {/* <Menu types={uniqueTypes}  /> */}
               {
                 data.allContentfulWork.edges.map((project, index) => (
                   <Card 
@@ -56,15 +54,12 @@ const Index = () => {
                       to={`/works/${project.node.url}`}
                     > 
                     {
-                      project.node.heroImage ?
+                      project.node.heroImage &&
                       <Img 
                         key={`works_${index}_${project.node.title}`}
                         fluid={project.node.heroImage.fluid}  
                         alt="Card image" 
-                      />
-                      :
-                      false
-                      
+                      /> 
                     }
                     </Link>
                     <Card.Body>

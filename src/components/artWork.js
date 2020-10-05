@@ -10,7 +10,7 @@ export default function artWork(props) {
     let title = base.title
     let medium = base.medium
     let description = base.description.internal.content
-    console.log(base)
+    // console.log(base)
     return (
         <div className="design">
             <SEO title={title} />
@@ -19,12 +19,15 @@ export default function artWork(props) {
             <p>{description}</p>
             <div className="images">
                 {
+                    base.images !== null ?
                     base.images.sort(() => Math.random() - 0.5).map((img, idx) => (
                         <Img
-                            key={`${img.id}_${img.title}`}
+                            key={`${idx}_${img.id}_${img.title}`}
                             fluid={img.fluid}
                         />
                     ))
+                    :
+                    false
                 }
             </div>
         </div>

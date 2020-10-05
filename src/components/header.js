@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'gatsby'
 import ThemeContext from '../context/ThemeContext'
-import { useMediaQuery } from 'react-responsive'
 
 import "../components/scss/header.scss"
 
@@ -12,14 +11,44 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
 const Header = ({ logo }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
+// found this code @ https://usehooks.com/useWindowSize/
+    // Initialize state with undefined width/height so server and client renders match
+    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+    const [windowSize, setWindowSize] = useState({
+      width: 400,
+      height: 700,
+    });
+
+    useEffect(() => {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+      
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+      
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty array ensures that effect is only run on mount
+
+  const size = windowSize;
 
   const [menuCheck, setmenuCheck] = useState(false)
 
   const changeMenu = () => {
     setmenuCheck(!menuCheck)
   }
+
+  // console.log(size)
 
   return(
     <ThemeContext.Consumer>
@@ -31,7 +60,8 @@ const Header = ({ logo }) => {
               </Link>
               <Navbar 
                 variant={theme.dark ? "dark" : "light"} 
-                fixed={isMobile ? 'bottom' : 'top'}
+                fixed={size.width >= 768 ? 'top' : 'bottom'}
+                // fixed={'bottom'}
                 expand="md" 
               >
                 <Navbar.Toggle 
@@ -50,13 +80,16 @@ const Header = ({ logo }) => {
                   style={{
                     backgroundColor: `
                     ${
-                      !isMobile ?
+                      size.width >= 768 ?
                         `rgba(0,0,0,0)`
                       :
                       !theme.dark ? "#fefefe" : "#2a2b2d"
                     }
                     `,
-                    color: `${theme.dark ? "#2a2b2d" : "#fefefe"}` 
+                    // backgroundColor: `
+                    // ${!theme.dark ? "#fefefe" : "#2a2b2d"}
+                    // `,
+                    color: `${!theme.dark ? "#2a2b2d" : "#fefefe"}` 
                     }}
                   >
                   <Nav className="ml-auto">

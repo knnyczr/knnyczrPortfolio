@@ -47,8 +47,16 @@
 
 @media only screen and (min-width : 1024px) {
     .works {
+        max-width: 70vw;
+        margin: 0 auto;
         h1 {
             text-align: left;
+        }
+        .card{
+            
+            .gatsby-image-wrapper{
+                max-height: 60vh
+            }
         }
     }
 }

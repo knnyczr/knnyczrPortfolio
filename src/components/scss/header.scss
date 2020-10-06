@@ -6,10 +6,12 @@
 
 header{
     position: fixed;
-    z-index: 1;
     img{
         margin: 25px 20px;
         height: 2em;
+    }
+    .logo{
+        // z-index: 10;
     }
     nav, .navbar{
         padding: 0;
@@ -37,7 +39,7 @@ header{
 
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+  and (max-device-width: 844px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     header{
         .logo{
@@ -58,9 +60,25 @@ header{
     }
 }
 
+@media only screen 
+  and (min-device-width: 844px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .navbar-nav{
+        margin-right: 4%;
+        // z-index: 1 !important;
+        a.nav-link {
+            font-size: 1.5rem !important;
+            padding: 0 !important;
+            margin: 15px 10px;
+        }
+    }
+}
+
 @media only screen and (min-width : 1024px) {
     header{
         .logo {
+            // z-index: 30;
             height: 3rem;
             margin: 70px;
         }
@@ -70,10 +88,14 @@ header{
     }
     .navbar-nav{
         margin-right: 4%;
+        // z-index: 1 !important;
         a.nav-link {
             font-size: 1.5rem !important;
             padding: 0 !important;
             margin: 15px 10px;
         }
     }
+    // .navbar-collapse {
+    //     z-index: 1 !important;
+    // }
 }

@@ -73,6 +73,12 @@ const Index = () => {
                       </p>
                       {
                         project.node.deployedLink &&
+                        <p>
+                          {project.node.medium}
+                        </p>
+                      }
+                      {
+                        project.node.deployedLink &&
                         <Button 
                           href={`${project.node.deployedLink}`}
                           variant={theme.dark ? 'dark' : 'light'}>Live Link</Button>
@@ -80,7 +86,7 @@ const Index = () => {
                       {
                         project.node.githubLink &&
                         <Button 
-                          href={`${project.node.github}`}
+                          href={`${project.node.githubLink}`}
                           variant={theme.dark ? 'dark' : 'light'}>Github</Button>
                           
                       }

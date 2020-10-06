@@ -90,7 +90,7 @@ main{
   and (max-device-width: 1200px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     main {
-      padding: 15%; 
+      padding: 10%; 
       margin-bottom: 5%;
       .landing {
         margin: 0;
@@ -103,7 +103,7 @@ main{
 
 @media only screen and (min-width : 1201px) {
   main {
-    padding: 5% 15%;
+    padding: 10% 15%;
     margin-bottom: 0;
     .landing{
       padding: 10%;

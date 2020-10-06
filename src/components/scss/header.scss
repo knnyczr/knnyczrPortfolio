@@ -6,6 +6,7 @@
 
 header{
     position: fixed;
+    z-index: 1; // this keeps the nav bar top the things. do not touch
     img{
         margin: 25px 20px;
         height: 2em;
@@ -48,10 +49,11 @@ header{
         }
     }
     #basic-navbar-nav{
-        background-color: rgba(0,0,0,0) ;
+        background-color: rgba(0,0,0,0);
     }
     .navbar-nav{
         margin-right: 4%;
+        z-index: 1;
         a.nav-link {
             font-size: 1.25rem !important;
             padding: 0 !important;
@@ -66,7 +68,7 @@ header{
   and (-webkit-min-device-pixel-ratio: 1) {
     .navbar-nav{
         margin-right: 4%;
-        // z-index: 1 !important;
+        z-index: 1 !important;
         a.nav-link {
             font-size: 1.5rem !important;
             padding: 0 !important;

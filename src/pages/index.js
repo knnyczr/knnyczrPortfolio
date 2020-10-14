@@ -10,7 +10,7 @@ export default class IndexPage extends Component {
       <div className="landing">
       <SEO title="Home" />
         <p>
-          Hello world, my name is <span>Kenneth Cruz</span>. I'm a 
+          Hello world, my name is <span>Kenny Cruz</span>. I'm a 
           <Typewriter
             options={{
               strings: [

@@ -18,7 +18,7 @@ export default class IndexPage extends Component {
                 ' Visual Artist', 
                 ' Front End Developer',
                 ' React Developer',
-                ' Graphic Desinger',
+                ' Graphic Designer',
                 ' UI Developer',
                 ' Packaging Designer', 
               ],

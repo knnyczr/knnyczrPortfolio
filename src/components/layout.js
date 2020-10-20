@@ -19,21 +19,22 @@ const Layout = ({ children }) => {
           title
         }
       }
-      allFile(filter: {name:{regex: "/logo/"} , extension: {regex: "/(svg)/"}}) {
-        edges {
-          node {
-            publicURL
-          }
-        }
-      }
+      # allFile(filter: {name:{regex: "/logo/"} , extension: {regex: "/(svg)/"}}) {
+      #   edges {
+      #     node {
+      #       publicURL
+      #     }
+      #   }
+      # }
     }
   `)
+  console.log(data)
   return (
     <ThemeContext.Consumer>
       {
         theme => (
           <div className={theme.dark ? 'dark' : 'light'}>
-            <Header siteTitle={data.site.siteMetadata.title} logo={data.allFile.edges} />
+            <Header siteTitle={data.site.siteMetadata.title} />
             <main>{children}</main>
             <Footer />
           </div>

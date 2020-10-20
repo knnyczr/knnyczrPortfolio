@@ -5,14 +5,16 @@
 
 
 header{
-    position: fixed;
+    position: fixed; // this keeps the nav bar top the things. do not touch
     z-index: 1; // this keeps the nav bar top the things. do not touch
-    img{
-        margin: 25px 20px;
-        height: 2em;
-    }
     .logo{
+        position: fixed;
         // z-index: 10;
+        svg {
+            margin: 25px 20px;
+            width: 40vw; 
+            height: auto;
+        }
     }
     nav, .navbar{
         padding: 0;
@@ -39,17 +41,17 @@ header{
 }
 
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 844px) 
+  and (min-width: 768px) 
+  and (max-width: 844px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     header{
         .logo{
-            margin: 30px;
-            height: 4rem;
+            svg{
+                margin-top: 8%;
+                width: 20vw;
+                height: auto;
+            }
         }
-    }
-    #basic-navbar-nav{
-        background-color: rgba(0,0,0,0);
     }
     .navbar-nav{
         margin-right: 4%;
@@ -63,9 +65,8 @@ header{
 }
 
 @media only screen 
-  and (min-device-width: 844px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (min-width: 844px) 
+  and (max-width: 1024px) {
     .navbar-nav{
         margin-right: 4%;
         z-index: 1 !important;
@@ -80,9 +81,12 @@ header{
 @media only screen and (min-width : 1024px) {
     header{
         .logo {
-            // z-index: 30;
-            height: 3rem;
-            margin: 70px;
+            svg{
+                margin-top: 6%;
+                margin-left: 30%;
+                width: 15vw;
+                height: auto;
+            }
         }
     }
     #basic-navbar-nav{
@@ -92,7 +96,7 @@ header{
         margin-right: 4%;
         // z-index: 1 !important;
         a.nav-link {
-            font-size: 1.5rem !important;
+            font-size: 1.3rem !important;
             padding: 0 !important;
             margin: 15px 10px;
         }

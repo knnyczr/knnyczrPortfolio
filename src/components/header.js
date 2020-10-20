@@ -8,9 +8,12 @@ import "../components/scss/header.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
+import BlackLogo from '../../data/images/logo/logo.svg'
+import Logo from '../../data/images/logo/logo2.svg'
 
 
-const Header = ({ logo }) => {
+
+const Header = () => {
 
 // found this code @ https://usehooks.com/useWindowSize/
     // Initialize state with undefined width/height so server and client renders match
@@ -48,16 +51,16 @@ const Header = ({ logo }) => {
     setmenuCheck(!menuCheck)
   }
 
-  // console.log(size)
-
   return(
     <ThemeContext.Consumer>
       {
         theme => (
             <header>
-              <Link className="logo" href="/">
-                <img src={theme.dark ? logo[1].node.publicURL : logo[0].node.publicURL } alt="kenny cruzer logo svg"/>
-              </Link>
+              <Navbar.Brand>
+                <Link className="logo" href="/">
+                  {!theme.dark ? <BlackLogo /> : <Logo /> }
+                </Link>
+              </Navbar.Brand>
               <Navbar 
                 variant={theme.dark ? "dark" : "light"} 
                 fixed={size.width >= 768 ? 'top' : 'bottom'}
@@ -81,7 +84,7 @@ const Header = ({ logo }) => {
                     backgroundColor: `
                     ${
                       size.width >= 768 ?
-                        `rgba(0,0,0,0)`
+                      `rgba(0, 0, 0, 0)`
                       :
                       !theme.dark ? "#fefefe" : "#2a2b2d"
                     }

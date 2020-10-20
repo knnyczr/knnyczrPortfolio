@@ -24,7 +24,7 @@ const Index = () => {
               deployedLink
               githubLink
               heroImage{
-                fluid{
+                fluid(maxWidth: 3080, quality: 100){
                   ...GatsbyContentfulFluid
                 }
               }
